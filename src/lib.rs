@@ -1,4 +1,4 @@
-# ! [ doc = "Peripheral access API for NRF51 microcontrollers (generated using svd2rust v0.5.1)" ] # ! [ deny ( missing_docs ) ] # ! [ deny ( warnings ) ] # ! [ feature ( const_fn ) ] # ! [ no_std ]extern crate cortex_m ;
+# ! [ doc = "Peripheral access API for NRF51 microcontrollers (generated using svd2rust v0.6.0)" ] # ! [ deny ( missing_docs ) ] # ! [ deny ( warnings ) ] # ! [ feature ( const_fn ) ] # ! [ no_std ]extern crate cortex_m ;
 extern crate vcell ;
 use core::ops::Deref;
 use cortex_m::peripheral::Peripheral;
@@ -12,211 +12,362 @@ pub mod interrupt {
         _0: (),
     }
     unsafe impl Context for PowerClock {}
+    unsafe impl Nr for PowerClock {
+        # [ inline ( always ) ]
+        fn nr(&self) -> u8 {
+            0
+        }
+    }
     # [ doc = "1 - RADIO" ]
     pub struct Radio {
         _0: (),
     }
     unsafe impl Context for Radio {}
+    unsafe impl Nr for Radio {
+        # [ inline ( always ) ]
+        fn nr(&self) -> u8 {
+            1
+        }
+    }
     # [ doc = "2 - UART0" ]
     pub struct Uart0 {
         _0: (),
     }
     unsafe impl Context for Uart0 {}
+    unsafe impl Nr for Uart0 {
+        # [ inline ( always ) ]
+        fn nr(&self) -> u8 {
+            2
+        }
+    }
     # [ doc = "3 - SPI0_TWI0" ]
     pub struct Spi0Twi0 {
         _0: (),
     }
     unsafe impl Context for Spi0Twi0 {}
+    unsafe impl Nr for Spi0Twi0 {
+        # [ inline ( always ) ]
+        fn nr(&self) -> u8 {
+            3
+        }
+    }
     # [ doc = "4 - SPI1_TWI1" ]
     pub struct Spi1Twi1 {
         _0: (),
     }
     unsafe impl Context for Spi1Twi1 {}
+    unsafe impl Nr for Spi1Twi1 {
+        # [ inline ( always ) ]
+        fn nr(&self) -> u8 {
+            4
+        }
+    }
     # [ doc = "6 - GPIOTE" ]
     pub struct Gpiote {
         _0: (),
     }
     unsafe impl Context for Gpiote {}
+    unsafe impl Nr for Gpiote {
+        # [ inline ( always ) ]
+        fn nr(&self) -> u8 {
+            6
+        }
+    }
     # [ doc = "7 - ADC" ]
     pub struct Adc {
         _0: (),
     }
     unsafe impl Context for Adc {}
+    unsafe impl Nr for Adc {
+        # [ inline ( always ) ]
+        fn nr(&self) -> u8 {
+            7
+        }
+    }
     # [ doc = "8 - TIMER0" ]
     pub struct Timer0 {
         _0: (),
     }
     unsafe impl Context for Timer0 {}
+    unsafe impl Nr for Timer0 {
+        # [ inline ( always ) ]
+        fn nr(&self) -> u8 {
+            8
+        }
+    }
     # [ doc = "9 - TIMER1" ]
     pub struct Timer1 {
         _0: (),
     }
     unsafe impl Context for Timer1 {}
+    unsafe impl Nr for Timer1 {
+        # [ inline ( always ) ]
+        fn nr(&self) -> u8 {
+            9
+        }
+    }
     # [ doc = "10 - TIMER2" ]
     pub struct Timer2 {
         _0: (),
     }
     unsafe impl Context for Timer2 {}
+    unsafe impl Nr for Timer2 {
+        # [ inline ( always ) ]
+        fn nr(&self) -> u8 {
+            10
+        }
+    }
     # [ doc = "11 - RTC0" ]
     pub struct Rtc0 {
         _0: (),
     }
     unsafe impl Context for Rtc0 {}
+    unsafe impl Nr for Rtc0 {
+        # [ inline ( always ) ]
+        fn nr(&self) -> u8 {
+            11
+        }
+    }
     # [ doc = "12 - TEMP" ]
     pub struct Temp {
         _0: (),
     }
     unsafe impl Context for Temp {}
+    unsafe impl Nr for Temp {
+        # [ inline ( always ) ]
+        fn nr(&self) -> u8 {
+            12
+        }
+    }
     # [ doc = "13 - RNG" ]
     pub struct Rng {
         _0: (),
     }
     unsafe impl Context for Rng {}
+    unsafe impl Nr for Rng {
+        # [ inline ( always ) ]
+        fn nr(&self) -> u8 {
+            13
+        }
+    }
     # [ doc = "14 - ECB" ]
     pub struct Ecb {
         _0: (),
     }
     unsafe impl Context for Ecb {}
+    unsafe impl Nr for Ecb {
+        # [ inline ( always ) ]
+        fn nr(&self) -> u8 {
+            14
+        }
+    }
     # [ doc = "15 - CCM_AAR" ]
     pub struct CcmAar {
         _0: (),
     }
     unsafe impl Context for CcmAar {}
+    unsafe impl Nr for CcmAar {
+        # [ inline ( always ) ]
+        fn nr(&self) -> u8 {
+            15
+        }
+    }
     # [ doc = "16 - WDT" ]
     pub struct Wdt {
         _0: (),
     }
     unsafe impl Context for Wdt {}
+    unsafe impl Nr for Wdt {
+        # [ inline ( always ) ]
+        fn nr(&self) -> u8 {
+            16
+        }
+    }
     # [ doc = "17 - RTC1" ]
     pub struct Rtc1 {
         _0: (),
     }
     unsafe impl Context for Rtc1 {}
+    unsafe impl Nr for Rtc1 {
+        # [ inline ( always ) ]
+        fn nr(&self) -> u8 {
+            17
+        }
+    }
     # [ doc = "18 - QDEC" ]
     pub struct Qdec {
         _0: (),
     }
     unsafe impl Context for Qdec {}
+    unsafe impl Nr for Qdec {
+        # [ inline ( always ) ]
+        fn nr(&self) -> u8 {
+            18
+        }
+    }
     # [ doc = "19 - LPCOMP" ]
     pub struct Lpcomp {
         _0: (),
     }
     unsafe impl Context for Lpcomp {}
+    unsafe impl Nr for Lpcomp {
+        # [ inline ( always ) ]
+        fn nr(&self) -> u8 {
+            19
+        }
+    }
     # [ doc = "20 - SWI0" ]
     pub struct Swi0 {
         _0: (),
     }
     unsafe impl Context for Swi0 {}
+    unsafe impl Nr for Swi0 {
+        # [ inline ( always ) ]
+        fn nr(&self) -> u8 {
+            20
+        }
+    }
     # [ doc = "21 - SWI1" ]
     pub struct Swi1 {
         _0: (),
     }
     unsafe impl Context for Swi1 {}
+    unsafe impl Nr for Swi1 {
+        # [ inline ( always ) ]
+        fn nr(&self) -> u8 {
+            21
+        }
+    }
     # [ doc = "22 - SWI2" ]
     pub struct Swi2 {
         _0: (),
     }
     unsafe impl Context for Swi2 {}
+    unsafe impl Nr for Swi2 {
+        # [ inline ( always ) ]
+        fn nr(&self) -> u8 {
+            22
+        }
+    }
     # [ doc = "23 - SWI3" ]
     pub struct Swi3 {
         _0: (),
     }
     unsafe impl Context for Swi3 {}
+    unsafe impl Nr for Swi3 {
+        # [ inline ( always ) ]
+        fn nr(&self) -> u8 {
+            23
+        }
+    }
     # [ doc = "24 - SWI4" ]
     pub struct Swi4 {
         _0: (),
     }
     unsafe impl Context for Swi4 {}
+    unsafe impl Nr for Swi4 {
+        # [ inline ( always ) ]
+        fn nr(&self) -> u8 {
+            24
+        }
+    }
     # [ doc = "25 - SWI5" ]
     pub struct Swi5 {
         _0: (),
     }
     unsafe impl Context for Swi5 {}
+    unsafe impl Nr for Swi5 {
+        # [ inline ( always ) ]
+        fn nr(&self) -> u8 {
+            25
+        }
+    }
     use cortex_m::Reserved;
     # [ doc = r" Interrupt handlers" ]
+    # [ allow ( non_snake_case ) ]
     # [ repr ( C ) ]
     pub struct Handlers {
         # [ doc = "0 - POWER_CLOCK" ]
-        pub power_clock: extern "C" fn(PowerClock),
+        pub PowerClock: extern "C" fn(PowerClock),
         # [ doc = "1 - RADIO" ]
-        pub radio: extern "C" fn(Radio),
+        pub Radio: extern "C" fn(Radio),
         # [ doc = "2 - UART0" ]
-        pub uart0: extern "C" fn(Uart0),
+        pub Uart0: extern "C" fn(Uart0),
         # [ doc = "3 - SPI0_TWI0" ]
-        pub spi0_twi0: extern "C" fn(Spi0Twi0),
+        pub Spi0Twi0: extern "C" fn(Spi0Twi0),
         # [ doc = "4 - SPI1_TWI1" ]
-        pub spi1_twi1: extern "C" fn(Spi1Twi1),
+        pub Spi1Twi1: extern "C" fn(Spi1Twi1),
         # [ doc = r" Reserved spot in the vector table" ]
         pub _reserved0: [Reserved; 1],
         # [ doc = "6 - GPIOTE" ]
-        pub gpiote: extern "C" fn(Gpiote),
+        pub Gpiote: extern "C" fn(Gpiote),
         # [ doc = "7 - ADC" ]
-        pub adc: extern "C" fn(Adc),
+        pub Adc: extern "C" fn(Adc),
         # [ doc = "8 - TIMER0" ]
-        pub timer0: extern "C" fn(Timer0),
+        pub Timer0: extern "C" fn(Timer0),
         # [ doc = "9 - TIMER1" ]
-        pub timer1: extern "C" fn(Timer1),
+        pub Timer1: extern "C" fn(Timer1),
         # [ doc = "10 - TIMER2" ]
-        pub timer2: extern "C" fn(Timer2),
+        pub Timer2: extern "C" fn(Timer2),
         # [ doc = "11 - RTC0" ]
-        pub rtc0: extern "C" fn(Rtc0),
+        pub Rtc0: extern "C" fn(Rtc0),
         # [ doc = "12 - TEMP" ]
-        pub temp: extern "C" fn(Temp),
+        pub Temp: extern "C" fn(Temp),
         # [ doc = "13 - RNG" ]
-        pub rng: extern "C" fn(Rng),
+        pub Rng: extern "C" fn(Rng),
         # [ doc = "14 - ECB" ]
-        pub ecb: extern "C" fn(Ecb),
+        pub Ecb: extern "C" fn(Ecb),
         # [ doc = "15 - CCM_AAR" ]
-        pub ccm_aar: extern "C" fn(CcmAar),
+        pub CcmAar: extern "C" fn(CcmAar),
         # [ doc = "16 - WDT" ]
-        pub wdt: extern "C" fn(Wdt),
+        pub Wdt: extern "C" fn(Wdt),
         # [ doc = "17 - RTC1" ]
-        pub rtc1: extern "C" fn(Rtc1),
+        pub Rtc1: extern "C" fn(Rtc1),
         # [ doc = "18 - QDEC" ]
-        pub qdec: extern "C" fn(Qdec),
+        pub Qdec: extern "C" fn(Qdec),
         # [ doc = "19 - LPCOMP" ]
-        pub lpcomp: extern "C" fn(Lpcomp),
+        pub Lpcomp: extern "C" fn(Lpcomp),
         # [ doc = "20 - SWI0" ]
-        pub swi0: extern "C" fn(Swi0),
+        pub Swi0: extern "C" fn(Swi0),
         # [ doc = "21 - SWI1" ]
-        pub swi1: extern "C" fn(Swi1),
+        pub Swi1: extern "C" fn(Swi1),
         # [ doc = "22 - SWI2" ]
-        pub swi2: extern "C" fn(Swi2),
+        pub Swi2: extern "C" fn(Swi2),
         # [ doc = "23 - SWI3" ]
-        pub swi3: extern "C" fn(Swi3),
+        pub Swi3: extern "C" fn(Swi3),
         # [ doc = "24 - SWI4" ]
-        pub swi4: extern "C" fn(Swi4),
+        pub Swi4: extern "C" fn(Swi4),
         # [ doc = "25 - SWI5" ]
-        pub swi5: extern "C" fn(Swi5),
+        pub Swi5: extern "C" fn(Swi5),
     }
     # [ doc = r" Default interrupt handlers" ]
     pub const DEFAULT_HANDLERS: Handlers = Handlers {
-        power_clock: exception::default_handler,
-        radio: exception::default_handler,
-        uart0: exception::default_handler,
-        spi0_twi0: exception::default_handler,
-        spi1_twi1: exception::default_handler,
+        PowerClock: exception::default_handler,
+        Radio: exception::default_handler,
+        Uart0: exception::default_handler,
+        Spi0Twi0: exception::default_handler,
+        Spi1Twi1: exception::default_handler,
         _reserved0: [Reserved::Vector; 1],
-        gpiote: exception::default_handler,
-        adc: exception::default_handler,
-        timer0: exception::default_handler,
-        timer1: exception::default_handler,
-        timer2: exception::default_handler,
-        rtc0: exception::default_handler,
-        temp: exception::default_handler,
-        rng: exception::default_handler,
-        ecb: exception::default_handler,
-        ccm_aar: exception::default_handler,
-        wdt: exception::default_handler,
-        rtc1: exception::default_handler,
-        qdec: exception::default_handler,
-        lpcomp: exception::default_handler,
-        swi0: exception::default_handler,
-        swi1: exception::default_handler,
-        swi2: exception::default_handler,
-        swi3: exception::default_handler,
-        swi4: exception::default_handler,
-        swi5: exception::default_handler,
+        Gpiote: exception::default_handler,
+        Adc: exception::default_handler,
+        Timer0: exception::default_handler,
+        Timer1: exception::default_handler,
+        Timer2: exception::default_handler,
+        Rtc0: exception::default_handler,
+        Temp: exception::default_handler,
+        Rng: exception::default_handler,
+        Ecb: exception::default_handler,
+        CcmAar: exception::default_handler,
+        Wdt: exception::default_handler,
+        Rtc1: exception::default_handler,
+        Qdec: exception::default_handler,
+        Lpcomp: exception::default_handler,
+        Swi0: exception::default_handler,
+        Swi1: exception::default_handler,
+        Swi2: exception::default_handler,
+        Swi3: exception::default_handler,
+        Swi4: exception::default_handler,
+        Swi5: exception::default_handler,
     };
     # [ doc = r" Enumeration of all the interrupts" ]
     pub enum Interrupt {

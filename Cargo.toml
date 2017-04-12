@@ -1,7 +1,12 @@
 [package]
 authors = ["Jorge Aparicio <japaricious@gmail.com>"]
+description = "Peripheral access API for nRF51 microcontrollers"
+documentation = "https://docs.rs/nrf51"
+keywords = ["no-std", "arm", "cortex-m", "nordic"]
+license = "MIT OR Apache-2.0"
 name = "nrf51"
-version = "0.1.0"
+repository = "https://github.com/japaric/nrf51"
+version = "0.2.0"
 
 [dependencies]
 cortex-m = "0.2.0"
