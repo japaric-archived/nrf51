@@ -1,4 +1,4 @@
-# ! [ doc = "Peripheral access API for NRF51 microcontrollers (generated using svd2rust v0.6.0)" ] # ! [ deny ( missing_docs ) ] # ! [ deny ( warnings ) ] # ! [ feature ( const_fn ) ] # ! [ no_std ]extern crate cortex_m ;
+# ! [ doc = "Peripheral access API for NRF51 microcontrollers (generated using svd2rust v0.6.1)" ] # ! [ deny ( missing_docs ) ] # ! [ deny ( warnings ) ] # ! [ feature ( const_fn ) ] # ! [ no_std ]extern crate cortex_m ;
 extern crate vcell ;
 use core::ops::Deref;
 use cortex_m::peripheral::Peripheral;
@@ -461,6 +461,7 @@ pub const POWER: Peripheral<Power> = unsafe { Peripheral::new(1073741824) };
 pub mod power {
     use vcell::VolatileCell;
     # [ doc = r" Register block" ]
+    # [ repr ( C ) ]
     pub struct RegisterBlock {
         _reserved0: [u8; 120usize],
         # [ doc = "0x78 - Enable constant latency mode." ]
@@ -4048,6 +4049,7 @@ pub const CLOCK: Peripheral<Clock> = unsafe { Peripheral::new(1073741824) };
 pub mod clock {
     use vcell::VolatileCell;
     # [ doc = r" Register block" ]
+    # [ repr ( C ) ]
     pub struct RegisterBlock {
         # [ doc = "0x00 - Start HFCLK clock source." ]
         pub tasks_hfclkstart: TasksHfclkstart,
@@ -6457,6 +6459,7 @@ pub const MPU: Peripheral<Mpu> = unsafe { Peripheral::new(1073741824) };
 pub mod mpu {
     use vcell::VolatileCell;
     # [ doc = r" Register block" ]
+    # [ repr ( C ) ]
     pub struct RegisterBlock {
         _reserved0: [u8; 1320usize],
         # [ doc = "0x528 - Configuration of peripherals in mpu regions." ]
@@ -15266,6 +15269,7 @@ pub const RADIO: Peripheral<Radio> = unsafe { Peripheral::new(1073745920) };
 pub mod radio {
     use vcell::VolatileCell;
     # [ doc = r" Register block" ]
+    # [ repr ( C ) ]
     pub struct RegisterBlock {
         # [ doc = "0x00 - Enable radio in TX mode." ]
         pub tasks_txen: TasksTxen,
@@ -25510,6 +25514,7 @@ pub const UART0: Peripheral<Uart0> = unsafe { Peripheral::new(1073750016) };
 pub mod uart0 {
     use vcell::VolatileCell;
     # [ doc = r" Register block" ]
+    # [ repr ( C ) ]
     pub struct RegisterBlock {
         # [ doc = "0x00 - Start UART receiver." ]
         pub tasks_startrx: TasksStartrx,
@@ -29499,6 +29504,7 @@ pub const SPI0: Peripheral<Spi0> = unsafe { Peripheral::new(1073754112) };
 pub mod spi0 {
     use vcell::VolatileCell;
     # [ doc = r" Register block" ]
+    # [ repr ( C ) ]
     pub struct RegisterBlock {
         _reserved0: [u8; 264usize],
         # [ doc = "0x108 - TXD byte sent and RXD byte received." ]
@@ -31240,6 +31246,7 @@ pub const TWI0: Peripheral<Twi0> = unsafe { Peripheral::new(1073754112) };
 pub mod twi0 {
     use vcell::VolatileCell;
     # [ doc = r" Register block" ]
+    # [ repr ( C ) ]
     pub struct RegisterBlock {
         # [ doc = "0x00 - Start 2-Wire master receive sequence." ]
         pub tasks_startrx: TasksStartrx,
@@ -34691,6 +34698,7 @@ pub const SPIS1: Peripheral<Spis1> = unsafe { Peripheral::new(1073758208) };
 pub mod spis1 {
     use vcell::VolatileCell;
     # [ doc = r" Register block" ]
+    # [ repr ( C ) ]
     pub struct RegisterBlock {
         _reserved0: [u8; 36usize],
         # [ doc = "0x24 - Acquire SPI semaphore." ]
@@ -37598,6 +37606,7 @@ pub const SPIM1: Peripheral<Spim1> = unsafe { Peripheral::new(1073758208) };
 pub mod spim1 {
     use vcell::VolatileCell;
     # [ doc = r" Register block" ]
+    # [ repr ( C ) ]
     pub struct RegisterBlock {
         _reserved0: [u8; 16usize],
         # [ doc = "0x10 - Start SPI transaction." ]
@@ -40011,6 +40020,7 @@ pub const GPIOTE: Peripheral<Gpiote> = unsafe { Peripheral::new(1073766400) };
 pub mod gpiote {
     use vcell::VolatileCell;
     # [ doc = r" Register block" ]
+    # [ repr ( C ) ]
     pub struct RegisterBlock {
         # [ doc = "0x00 - Tasks asssociated with GPIOTE channels." ]
         pub tasks_out0: TasksOut,
@@ -41936,6 +41946,7 @@ pub const ADC: Peripheral<Adc> = unsafe { Peripheral::new(1073770496) };
 pub mod adc {
     use vcell::VolatileCell;
     # [ doc = r" Register block" ]
+    # [ repr ( C ) ]
     pub struct RegisterBlock {
         # [ doc = "0x00 - Start an ADC conversion." ]
         pub tasks_start: TasksStart,
@@ -43715,6 +43726,7 @@ pub const TIMER0: Peripheral<Timer0> = unsafe { Peripheral::new(1073774592) };
 pub mod timer0 {
     use vcell::VolatileCell;
     # [ doc = r" Register block" ]
+    # [ repr ( C ) ]
     pub struct RegisterBlock {
         # [ doc = "0x00 - Start Timer." ]
         pub tasks_start: TasksStart,
@@ -46577,6 +46589,7 @@ pub const RTC0: Peripheral<Rtc0> = unsafe { Peripheral::new(1073786880) };
 pub mod rtc0 {
     use vcell::VolatileCell;
     # [ doc = r" Register block" ]
+    # [ repr ( C ) ]
     pub struct RegisterBlock {
         # [ doc = "0x00 - Start RTC Counter." ]
         pub tasks_start: TasksStart,
@@ -50607,6 +50620,7 @@ pub const TEMP: Peripheral<Temp> = unsafe { Peripheral::new(1073790976) };
 pub mod temp {
     use vcell::VolatileCell;
     # [ doc = r" Register block" ]
+    # [ repr ( C ) ]
     pub struct RegisterBlock {
         # [ doc = "0x00 - Start temperature measurement." ]
         pub tasks_start: TasksStart,
@@ -51289,6 +51303,7 @@ pub const RNG: Peripheral<Rng> = unsafe { Peripheral::new(1073795072) };
 pub mod rng {
     use vcell::VolatileCell;
     # [ doc = r" Register block" ]
+    # [ repr ( C ) ]
     pub struct RegisterBlock {
         # [ doc = "0x00 - Start the random number generator." ]
         pub tasks_start: TasksStart,
@@ -52333,6 +52348,7 @@ pub const ECB: Peripheral<Ecb> = unsafe { Peripheral::new(1073799168) };
 pub mod ecb {
     use vcell::VolatileCell;
     # [ doc = r" Register block" ]
+    # [ repr ( C ) ]
     pub struct RegisterBlock {
         # [ doc = "0x00 - Start ECB block encrypt. If a crypto operation is running, this will not initiate a new encryption and the ERRORECB event will be triggered." ]
         pub tasks_startecb: TasksStartecb,
@@ -53308,6 +53324,7 @@ pub const AAR: Peripheral<Aar> = unsafe { Peripheral::new(1073803264) };
 pub mod aar {
     use vcell::VolatileCell;
     # [ doc = r" Register block" ]
+    # [ repr ( C ) ]
     pub struct RegisterBlock {
         # [ doc = "0x00 - Start resolving addresses based on IRKs specified in the IRK data structure." ]
         pub tasks_start: TasksStart,
@@ -54998,6 +55015,7 @@ pub const CCM: Peripheral<Ccm> = unsafe { Peripheral::new(1073803264) };
 pub mod ccm {
     use vcell::VolatileCell;
     # [ doc = r" Register block" ]
+    # [ repr ( C ) ]
     pub struct RegisterBlock {
         # [ doc = "0x00 - Start generation of key-stream. This operation will stop by itself when completed." ]
         pub tasks_ksgen: TasksKsgen,
@@ -57052,6 +57070,7 @@ pub const WDT: Peripheral<Wdt> = unsafe { Peripheral::new(1073807360) };
 pub mod wdt {
     use vcell::VolatileCell;
     # [ doc = r" Register block" ]
+    # [ repr ( C ) ]
     pub struct RegisterBlock {
         # [ doc = "0x00 - Start the watchdog." ]
         pub tasks_start: TasksStart,
@@ -59513,6 +59532,7 @@ pub const QDEC: Peripheral<Qdec> = unsafe { Peripheral::new(1073815552) };
 pub mod qdec {
     use vcell::VolatileCell;
     # [ doc = r" Register block" ]
+    # [ repr ( C ) ]
     pub struct RegisterBlock {
         # [ doc = "0x00 - Start the quadrature decoder." ]
         pub tasks_start: TasksStart,
@@ -62547,6 +62567,7 @@ pub const LPCOMP: Peripheral<Lpcomp> = unsafe { Peripheral::new(1073819648) };
 pub mod lpcomp {
     use vcell::VolatileCell;
     # [ doc = r" Register block" ]
+    # [ repr ( C ) ]
     pub struct RegisterBlock {
         # [ doc = "0x00 - Start the comparator." ]
         pub tasks_start: TasksStart,
@@ -65740,6 +65761,7 @@ pub const SWI: Peripheral<Swi> = unsafe { Peripheral::new(1073823744) };
 pub mod swi {
     use vcell::VolatileCell;
     # [ doc = r" Register block" ]
+    # [ repr ( C ) ]
     pub struct RegisterBlock {
         # [ doc = "0x00 - Unused." ]
         pub unused: Unused,
@@ -65786,6 +65808,7 @@ pub const NVMC: Peripheral<Nvmc> = unsafe { Peripheral::new(1073864704) };
 pub mod nvmc {
     use vcell::VolatileCell;
     # [ doc = r" Register block" ]
+    # [ repr ( C ) ]
     pub struct RegisterBlock {
         _reserved0: [u8; 1024usize],
         # [ doc = "0x400 - Ready flag." ]
@@ -66607,6 +66630,7 @@ pub const PPI: Peripheral<Ppi> = unsafe { Peripheral::new(1073868800) };
 pub mod ppi {
     use vcell::VolatileCell;
     # [ doc = r" Register block" ]
+    # [ repr ( C ) ]
     pub struct RegisterBlock {
         _reserved0: [u8; 1280usize],
         # [ doc = "0x500 - Channel enable." ]
@@ -77986,6 +78010,7 @@ pub const FICR: Peripheral<Ficr> = unsafe { Peripheral::new(268435456) };
 pub mod ficr {
     use vcell::VolatileCell;
     # [ doc = r" Register block" ]
+    # [ repr ( C ) ]
     pub struct RegisterBlock {
         _reserved0: [u8; 16usize],
         # [ doc = "0x10 - Code memory page size in bytes." ]
@@ -79602,6 +79627,7 @@ pub const UICR: Peripheral<Uicr> = unsafe { Peripheral::new(268439552) };
 pub mod uicr {
     use vcell::VolatileCell;
     # [ doc = r" Register block" ]
+    # [ repr ( C ) ]
     pub struct RegisterBlock {
         # [ doc = "0x00 - Length of code region 0." ]
         pub clenr0: Clenr0,
@@ -80557,6 +80583,7 @@ pub const GPIO: Peripheral<Gpio> = unsafe { Peripheral::new(1342177280) };
 pub mod gpio {
     use vcell::VolatileCell;
     # [ doc = r" Register block" ]
+    # [ repr ( C ) ]
     pub struct RegisterBlock {
         _reserved0: [u8; 1284usize],
         # [ doc = "0x504 - Write GPIO port." ]

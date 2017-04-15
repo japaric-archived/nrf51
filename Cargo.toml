@@ -6,7 +6,7 @@ keywords = ["no-std", "arm", "cortex-m", "nordic"]
 license = "MIT OR Apache-2.0"
 name = "nrf51"
 repository = "https://github.com/japaric/nrf51"
-version = "0.2.0"
+version = "0.2.1"
 
 [dependencies]
 cortex-m = "0.2.0"
