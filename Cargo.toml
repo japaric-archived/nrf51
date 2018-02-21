@@ -9,5 +9,6 @@ repository = "https://github.com/japaric/nrf51"
 version = "0.3.0"
 
 [dependencies]
-cortex-m = "0.2.0"
+cortex-m = "0.4.3"
 vcell = "0.1.0"
+bare-metal = "0.1.1"
