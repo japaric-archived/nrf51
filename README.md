@@ -1,3 +1,13 @@
+# Status
+
+This repository has been **DEPRECATED** in favor of
+https://github.com/nrf-rs/nrf51 That `nrf51` crate on crates.io corresponds to
+that repository.
+
+-- @japaric, 2018-12-08
+
+---
+
 # `nrf51`
 
 > Peripheral access API for nRF51 microcontrollers
